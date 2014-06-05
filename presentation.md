@@ -337,9 +337,9 @@ which equivalent to:
 Nest a list comprehension in the expression.
 
     !python,linenos=no
-    >>> print [["+" * i] for i in range(5)]
-    [[''], ['+'], ['++'], ['+++'], ['++++']]
-
+    >>> L = [[1,2,3],[2,3],[1]]
+    >>> [[i*2 for i in vec] for vec in L if len(vec)>2]
+    [[2, 4, 6]]
 
 
 ---
@@ -352,7 +352,7 @@ What happend when list comprehensions become long?
 
 PEP8 predates list comprehensions.
 
-    !python
+    !python,linenos=no
     [expression 
      for variable
      in iterable
