@@ -2189,8 +2189,9 @@ https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions
             
             
             <section><p>Nest a list comprehension in the expression.</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span> <span class="p">[[</span><span class="s">&quot;+&quot;</span> <span class="o">*</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-<span class="p">[[</span><span class="s">&#39;&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;+&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;++&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;+++&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;++++&#39;</span><span class="p">]]</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">vec</span><span class="p">]</span> <span class="k">for</span> <span class="n">vec</span> <span class="ow">in</span> <span class="n">L</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
 </pre></div>
 </section>
             
@@ -2226,10 +2227,10 @@ https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions
 
 <p>What happend when list comprehensions become long?</p>
 <p>PEP8 predates list comprehensions.</p>
-<div class="highlight"><pre><span class="lineno">1</span> <span class="p">[</span><span class="n">expression</span> 
-<span class="lineno">2</span>  <span class="k">for</span> <span class="n">variable</span>
-<span class="lineno">3</span>  <span class="ow">in</span> <span class="n">iterable</span>
-<span class="lineno">4</span> <span class="p">]</span>
+<div class="highlight"><pre><span class="p">[</span><span class="n">expression</span> 
+ <span class="k">for</span> <span class="n">variable</span>
+ <span class="ow">in</span> <span class="n">iterable</span>
+<span class="p">]</span>
 </pre></div>
 
 <p>Try to avoid two disjoint statements the same line.</p></section>
