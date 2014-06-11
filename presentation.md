@@ -137,7 +137,7 @@ can however be used in the `expression` part of the list comprehension.
     !python,linenos=no
     >>> d = {'kyle': 3, 'stan': 5, 'eric': 0, 'kenny': 7}
     [('stan', 5), ('kenny', 7), ('kyle', 3), ('eric', 0)]
-    >>> ["{0} = 5".format(k) k if (v==0) else "{0} = {1}" % (k, v) \
+    >>> ["{0} = 5".format(k) if (v==0) else "{0} = {1}".format(k, v) \
         for k, v in d.items()]
     ['stan = 5', 'kenny = 7', 'kyle = 3', 'eric = 5']
 
